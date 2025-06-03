@@ -14,6 +14,9 @@ plugins:
   - name: target-postgres
     variant: matatika
     pip_url: git+https://github.com/Matatika/pipelinewise-target-postgres@v0.2.0
+  - name: target-bigquery
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/target-bigquery.git@v1.0
   transforms:
   - name: dbt-tap-trello
     variant: matatika

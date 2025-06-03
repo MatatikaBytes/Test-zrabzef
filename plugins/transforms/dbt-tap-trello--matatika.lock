@@ -1,0 +1,26 @@
+{
+  "plugin_type": "transforms",
+  "name": "dbt-tap-trello",
+  "namespace": "tap_trello",
+  "variant": "matatika",
+  "label": "dbt-tap-trello",
+  "repo": "https://github.com/Matatika/dbt-tap-trello",
+  "pip_url": "https://github.com/Matatika/dbt-tap-trello@v0.4.0",
+  "requires": {
+    "extractors": [
+      {
+        "name": "tap-trello",
+        "variant": "matatika"
+      }
+    ],
+    "transformers": [
+      {
+        "name": "dbt",
+        "variant": "dbt-labs"
+      }
+    ]
+  },
+  "vars": {
+    "schema": "{{ env_var('DBT_SOURCE_SCHEMA') }}"
+  }
+}

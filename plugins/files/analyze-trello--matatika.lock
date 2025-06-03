@@ -1,0 +1,21 @@
+{
+  "plugin_type": "files",
+  "name": "analyze-trello",
+  "namespace": "tap_trello",
+  "variant": "matatika",
+  "label": "Trello Insights",
+  "repo": "https://github.com/Matatika/analyze-trello",
+  "pip_url": "git+https://github.com/Matatika/analyze-trello@v0.5.0",
+  "description": "Instant insights on members, cards, boards, and actions from Trello.",
+  "requires": {
+    "transforms": [
+      {
+        "name": "dbt-tap-trello",
+        "variant": "matatika"
+      }
+    ]
+  },
+  "update": {
+    "*.yml": "true"
+  }
+}

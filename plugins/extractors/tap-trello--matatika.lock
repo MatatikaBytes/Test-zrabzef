@@ -1,0 +1,48 @@
+{
+  "plugin_type": "extractors",
+  "name": "tap-trello",
+  "namespace": "tap_trello",
+  "variant": "matatika",
+  "label": "Trello",
+  "docs": "https://www.matatika.com/docs/instant-insights/tap-trello/",
+  "repo": "https://github.com/Matatika/tap-trello",
+  "pip_url": "git+https://github.com/Matatika/tap-trello@v0.7.0",
+  "description": "Trello is a web-based project management tool.\n\nTrello is a web-based project management tool that allows users to create boards, lists, and cards to organize and prioritize tasks and projects. Users can add team members, due dates, attachments, and comments to cards, and move them between lists as they progress. Trello also offers integrations with other tools such as Google Drive, Slack, and Jira, making it a versatile and customizable solution for teams of all sizes and industries. With a simple and intuitive interface, Trello is a popular choice for individuals and teams looking to streamline their workflows and increase productivity.\n### Prerequisites\nTo obtain a Developer API Key and Access Token for Trello, follow these steps:\n\n1. Go to the Trello Developer API Key website: https://trello.com/app-key\n2. Log in to your Trello account if you haven't already.\n3. Click the \"Generate API Key\" button to generate your Developer API Key.\n4. Copy the Developer API Key to a safe location.\n5. Click the \"Token\" link next to the Developer API Key to generate your Access Token.\n6. Follow the prompts to authorize the token for your Trello account.\n7. Copy the Access Token to a safe location.\n\nNote: Keep your Developer API Key and Access Token secure, as they provide access to your Trello account.",
+  "logo_url": "/assets/images/datasource/tap-trello.png",
+  "capabilities": [
+    "catalog",
+    "discover",
+    "state"
+  ],
+  "settings": [
+    {
+      "name": "developer_api_key",
+      "kind": "string",
+      "label": "Developer API Key",
+      "description": "A unique identifier used to authenticate and authorize API requests.",
+      "hidden": false,
+      "sensitive": true,
+      "required": "true",
+      "protected": false
+    },
+    {
+      "name": "access_token",
+      "kind": "string",
+      "label": "Access Token",
+      "description": "A token that grants access to a user's Trello account and resources.",
+      "hidden": false,
+      "sensitive": true,
+      "required": "true",
+      "protected": false
+    },
+    {
+      "name": "start_date",
+      "kind": "string",
+      "label": "Start date",
+      "description": "The date from which to start retrieving data from Trello.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    }
+  ]
+}

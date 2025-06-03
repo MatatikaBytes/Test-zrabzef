@@ -5,3 +5,35 @@ environments:
 - name: dev
 - name: staging
 - name: prod
+plugins:
+  extractors:
+  - name: tap-trello
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-trello@v0.7.0
+  loaders:
+  - name: target-postgres
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/pipelinewise-target-postgres@v0.2.0
+  transforms:
+  - name: dbt-tap-trello
+    variant: matatika
+    pip_url: https://github.com/Matatika/dbt-tap-trello@v0.4.0
+  transformers:
+  - name: dbt
+    variant: dbt-labs
+    pip_url: dbt-core~=1.7.0 dbt-postgres~=1.7.0 dbt-snowflake~=1.7.0 dbt-bigquery~=1.7.0
+      certifi==2025.1.31
+  files:
+  - name: files-dbt
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/files-dbt@v1.2
+  - name: analyze-trello
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/analyze-trello@v0.5.0
+  utilities:
+  - name: matatika
+    variant: matatika
+    pip_url: matatika~=1.16.0
+  - name: dbt-artifacts
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/dbt-artifacts-ext.git
